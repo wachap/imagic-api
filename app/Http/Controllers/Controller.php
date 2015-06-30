@@ -12,25 +12,39 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 abstract class Controller extends BaseController
 {
-    use DispatchesJobs, ValidatesRequests;
+	use DispatchesJobs, ValidatesRequests;
 
-    protected $resource;
-    protected $repository;
+	protected $resource;
+	protected $repository;
 
-    /**
-     *  Busca y declara el resource
-     */
-    public function find (Route $route)
-    {
-        $id             = $route->getParameter('id');
-        $this->resource = $this->repository->find($id);
+	/**
+	 *  Busca y declara el resource
+	 */
+	public function find (Route $route)
+	{
+		$id             = $route->getParameter('id');
+		$this->resource = $this->repository->find($id);
 
-        if (!$this->resource)
-        {
-            if (Request::ajax()) {
-                return response()->json([], 404);
-            }
-            throw new NotFoundHttpException;
-        }
-    }
+		if (!$this->resource)
+		{
+			if (Request::ajax()) {
+				return response()->json([], 404);
+			}
+			throw new NotFoundHttpException;
+		}
+	}
+
+	public function findWithTrashed (Route $route)
+	{
+		$id             = $route->getParameter('id');
+		$this->resource = $this->repository->findWithTrashed($id);
+
+		if (!$this->resource)
+		{
+			if (Request::ajax()) {
+				return response()->json([], 404);
+			}
+			throw new NotFoundHttpException;
+		}
+	}
 }
