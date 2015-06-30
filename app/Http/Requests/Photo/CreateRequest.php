@@ -14,8 +14,8 @@ class CreateRequest extends Request {
 	public function rules ()
 	{
 		return [
-			// 'name'  => 'required',
-			// 'image' => 'required|image|mimes:jpeg,jpg,png|max:1000'
+			'name'  => 'required',
+			'image' => 'required|image|mimes:jpeg,jpg,png|max:1000'
 		];
 	}
 }
