@@ -110,7 +110,7 @@ function photoPreviewTemplate (photo)
 function getFormData ()
 {
 	var formData = new FormData();
-	formData.append('file', $imageInput[0].files[0] );
+	formData.append('image', $imageInput[0].files[0] );
 	formData.append('name', $nameInput.val() );
 	return formData;
 }
