@@ -2,7 +2,7 @@
 
 // Models
 use App\Models\Repositories\PhotoRepo;
-// use App\Models\Managers\PhotoManager;
+use App\Models\Managers\PhotoManager;
 use App\Models\Entitie\Photo;
 
 // Request
@@ -11,7 +11,7 @@ use App\Http\Requests\Photo\UpdateRequest as UpdatePhotoRequest;
 use App\Http\Requests\Photo\ModifyRequest as ModifyPhotoRequest;
 
 // Utils
-// use App\Utils\Files\ImageFileManager;
+use App\Utils\Files\ImageFileManager;
 
 // Laravel
 use App\Http\Controllers\Controller;
@@ -19,9 +19,10 @@ use Illuminate\Routing\Route;
 
 class PhotoController extends Controller {
 
-	public function __construct (PhotoRepo $photoRepo)
+	public function __construct (PhotoRepo $photoRepo, PhotoManager $photoManager)
 	{
-        $this->repository = $photoRepo;
+        $this->repository   = $photoRepo;
+		$this->manager 		= $photoManager;
 
 		$this->beforeFilter('@find', ['only' => ['show', 'update', 'modify', 'delete']] );
 	}
@@ -32,7 +33,8 @@ class PhotoController extends Controller {
 	 */
 	public function read ()
 	{
-
+		$resources = $this->photoRepo->all();
+		return response()->json($resources, 200);
 	}
 
     /**
@@ -60,7 +62,7 @@ class PhotoController extends Controller {
 	 */
 	public function show ()
 	{
-
+		return response()->json($this->resource, 200);
 	}
 
 	/**
@@ -69,7 +71,8 @@ class PhotoController extends Controller {
 	 */
 	public function create (CreatePhotoRequest $request)
 	{
-
+		$data = $request->only($this->manager->createFilterData());
+		
 	}
 
 	/**
