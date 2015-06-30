@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Photo;
 
 use App\Http\Requests\Request;
 
-class ModifyPhotoRequest extends Request {
+class ModifyRequest extends Request {
 
 	public function authorize()
 	{
