@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 // Utils
-use App\Utils\Files\ImageFileManager;
+// use App\Utils\Files\ImageFileManager;
 
 // Laravel
 use Illuminate\Http\Request;
