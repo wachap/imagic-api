@@ -1,5 +1,7 @@
 <?php namespace App\Models\Managers;
 
+use App\Models\Entities\Photo;
+
 // Utils
 use App\Utils\Files\ImageFileManager;
 
