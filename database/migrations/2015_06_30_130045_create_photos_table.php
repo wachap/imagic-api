@@ -20,7 +20,7 @@ class CreatePhotosTable extends Migration
             $table->string('slug');
             $table->string('url');
             $table->string('fileName');
-            $table->boolean('trashed')->default(true);
+            $table->boolean('trashed')->default(false);
 
             $table->softDeletes();
             $table->timestamps();
