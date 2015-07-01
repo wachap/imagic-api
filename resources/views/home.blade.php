@@ -9,7 +9,5 @@
 @stop
 
 @section('scripts')
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="js/custom-jquery.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/app.js"></script>
 @stop
