@@ -19,7 +19,7 @@ function postPhoto (data, callback) {
 }
 
 // VARIABLES
-var $imageInput = $('#file');
+var $imageInput = $('#image');
 var $nameInput  = $('#name');
 var $button     = $('#submit');
 var $resultOut  = $('#result');
@@ -49,20 +49,20 @@ function onChangeImage ()
 	reader.readAsDataURL($imageInput[0].files[0]);
 	reader.onload = function (e)
 	{
-    photo       = {};
-    photo.url   = e.target.result;
-    photo.title = $imageInput.val().split(/(\\|\/)/g).pop();
+		photo       = {};
+		photo.url   = e.target.result;
+		photo.title = $imageInput.val().split(/(\\|\/)/g).pop();
 
-    fillPhotoPreview(photo);
+		fillPhotoPreview(photo);
 	}
 };
 
 function onProgress (e)
 {
 	if (e.lengthComputable) {
-	    console.log('Loaded '+ (e.loaded / e.total * 100) + '%');
+		console.log('Loaded '+ (e.loaded / e.total * 100) + '%');
 	} else {
-	    console.log('Length not computable.');
+		console.log('Length not computable.');
 	}
 };
 
@@ -80,7 +80,7 @@ function onSuccess ()
 // Fill Functions
 function fillPhoto (jsonData)
 {
-	var html = photoTemplate(jsonData);
+	var html = photoTemplate(jsonData.photo);
 	$resultOut.html(html);
 };
 
