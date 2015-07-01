@@ -12,5 +12,13 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss', 'public/css/style.css');
+});
+
+elixir(function(mix) {
+    mix.scripts([
+        "jquery-1.11.3.min.js",
+        "custom-jquery.js",
+        "app.js"
+    ], 'public/js/app.js');
 });
