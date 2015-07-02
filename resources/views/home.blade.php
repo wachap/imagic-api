@@ -27,13 +27,18 @@
 
 	<!-- seccion principal -->
 	<section class="PhotosApp-main">
-		<div class="Photo-group">
-			<div class="Photo-date">
+		<div class="PhotoList">
+			<div class="PhotoList-date">
 				<span>Hoy</span>
 			</div>
-			<div class="Photos">
-				<div class="Photo">
-					<img src="#" alt="#"/>
+			<div class="PhotoList-photos">
+				<div class="PhotoList-photo">
+					<button class="PhotoList-buttonSelect">
+						<span class="icon-check">C</span>						
+					</button>					
+					<a href="#" class="PhotoList-photoContainer">
+						<img src="#" alt="#"/>						
+					</a>
 				</div>
 			</div>
 		</div>
@@ -41,23 +46,26 @@
 
 	<!-- barra superior -->
 	<section class="PhotosApp-options">
-		<div class="search">
-			<input type="text" id="search" />
-		</div>
-		<div class="upload">
-			<button class="btn-upload" data-toggle="modal" data-target="#imageUploadModal">
-				<span class="icon-upload"></span>
-			</button>
+		<div class="PhotoOptions">
+			<div class="PhotoOptions-search">
+				<input type="text" id="search" />
+			</div>
+			<div class="PhotoOptions-upload">
+				<button class="btn-upload" data-toggle="modal" data-target="#imageUploadModal">
+					<span class="icon-upload">U</span>
+				</button>
+			</div>			
 		</div>
 	</section>
 </section>
 
-
+<!--
   <input type="file" data-type="image" id="image" />
   <input type="text" data-type="name" id="name" />
   <button type="button" data-action="upload" id="submit">Do it</button>
   <div id="result"></div>
   <div id="progress"></div>
+-->
 @stop
 
 @section('scripts')
