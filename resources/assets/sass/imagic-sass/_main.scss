@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+// 1. Vendors
+@import 'vendor/vendor';
+
+// 2. Functions, mixins
+@import 'utils/utils';
+
+// 3. Iconos
+@import 'icons/icons';
+
+// 4. Configuration
+@import 'variables/variables';
+
+// 5. Base stuff
+@import 'base/base';
+
+// 6. Layout-related sections
+@import 'layout/layout';
+
+// 7. Components
+@import 'components/components';
+
+// 8. Page-specific styles
+@import 'pages/pages';

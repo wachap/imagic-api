@@ -1,0 +1,33 @@
+// Typography
+$headingFontFamily : 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$contentFontFamily : 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+// Font size
+$body-font-size : 16px;
+
+// Text Colors
+$body-text-color : $dark-black;
+
+// Borders Colors
+$border-color : $black;
+
+// Component Colors
+$canvas-color     : $white;
+
+// buttons
+$button-height    : 36px;
+$button-min-width : 88px;
+
+/// Container's maximum width
+/// Below that is 100%
+/// @type Length
+$max-width: 1200px !default;
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/public/' !default;

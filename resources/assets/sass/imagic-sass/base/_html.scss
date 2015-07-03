@@ -1,0 +1,28 @@
+// @import this file to make your UI adhere better to the Material UI guidelines
+// This will intentionally overwrite the behaviour of plain HTML tags
+
+html {
+	-webkit-font-smoothing: antialiased;
+	color: $body-text-color;
+	font-family: $contentFontFamily;
+	background-color: $canvas-color;
+}
+
+body {
+	font-size: $body-font-size;
+}
+
+hr {
+	border: none;
+	border-bottom: solid 1px $border-color;
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+p  {}
