@@ -6,22 +6,32 @@
 
 	<!-- barra lateral izquierda -->
 	<section class="PhotosApp-nav">
-		<div class="nav-logo">
-			<img src="#" alt="#"/>
-		</div>
-		<div class="nav-options">
-			<div class="options-top">
-				<div class="option">
-					<span class="icon-image">I</span>
-					<span class="option-label">Fotos</span>
-				</div>				
+		<div class="OptionList">
+			<div class="OptionList-logo">
+				<img src="#" alt="#"/>
 			</div>
-			<div class="options-bottom">
-				<div class="option">
-					<span class="icon-trash">T</span>
-					<span class="option-label">Papelera</span>
-				</div>				
-			</div>
+			<div class="OptionList-options">
+				<div class="OptionList-optionsTop">
+					<a href="#" class="OptionList-option">
+						<div class="OptionList-optionIcon">
+							<span class="icon-image">I</span>							
+						</div>
+						<div class="OptionList-optionLabel">
+							<span>Fotos</span>							
+						</div>
+					</a>	
+				</div>
+				<div class="OptionList-optionsBottom">
+					<a href="#" class="OptionList-option">
+						<div class="OptionList-optionIcon">
+							<span class="icon-trash">T</span>
+						</div>
+						<div class="OptionList-optionLabel">
+							<span>Papelera</span>							
+						</div>						
+					</a>				
+				</div>
+			</div>			
 		</div>
 	</section>
 
