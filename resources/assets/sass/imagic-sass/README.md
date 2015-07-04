@@ -8,3 +8,7 @@ Each folder of this project has its own `README.md` file to explain the purpose 
 # Main file
 
 Este archivo ('main.scss') deberia ser el unico archivo Sass de todo el proyecto que no empieza con un underscore. Solo debe contener `@import`. y comentarios.
+
+```shell
+  $ sass --watch app.scss:../../../public/css/style.css
+```
