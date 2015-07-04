@@ -142,5 +142,3 @@ function getFormData ()
 
 
 });
-
-//# sourceMappingURL=app.js.map
