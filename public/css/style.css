@@ -169,7 +169,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -237,8 +236,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -298,8 +296,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -356,6 +352,67 @@ td,
 th {
   padding: 0; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?cr9etf");
+  src: url("../fonts/icomoon.eot?#iefixcr9etf") format("embedded-opentype"), url("../fonts/icomoon.ttf?cr9etf") format("truetype"), url("../fonts/icomoon.woff?cr9etf") format("woff"), url("../fonts/icomoon.svg?cr9etf#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-replay:before {
+  content: "\e025"; }
+
+.icon-insert_link:before {
+  content: "\e0ea"; }
+
+.icon-insert_photo:before {
+  content: "\e0eb"; }
+
+.icon-keyboard_arrow_left:before {
+  content: "\e110"; }
+
+.icon-keyboard_arrow_right:before {
+  content: "\e111"; }
+
+.icon-edit:before {
+  content: "\e15e"; }
+
+.icon-arrow_back:before {
+  content: "\e200"; }
+
+.icon-close:before {
+  content: "\e209"; }
+
+.icon-backup:before {
+  content: "\e279"; }
+
+.icon-check_circle:before {
+  content: "\e281"; }
+
+.icon-delete:before {
+  content: "\e287"; }
+
+.icon-get_app:before {
+  content: "\e298"; }
+
+.icon-info:before {
+  content: "\e2a2"; }
+
+.icon-search:before {
+  content: "\e2ca"; }
+
 * {
   -webkit-tap-highlight-color: transparent; }
 
@@ -386,7 +443,14 @@ html {
   background-color: #ffffff; }
 
 body {
-  font-size: 16px; }
+  font-size: 16px;
+  /* Flex */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 hr {
   border: none;
@@ -395,25 +459,142 @@ hr {
   margin-bottom: 18px; }
 
 .App-header {
-  background: #ff4136;
-  padding: 15px 30px;
+  background: #ffffff;
+  padding: 5px 30px;
   width: 100%; }
 
 .App-options {
-  background: #0074d9;
+  /* Flex */
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 260px;
+  -ms-flex-preferred-size: 260px;
   flex-basis: 260px; }
 
 .App-main {
   background: #ffdc00;
+  /* Flex */
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .AppHeader {
   /* Flex */
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+.AppHeader-logo {
+  /* Flex */
+  -webkit-flex-grow: 0.5;
+  -ms-flex-positive: 0.5;
+  flex-grow: 0.5; }
+  .AppHeader-logo img,
+  .AppHeader-logo h1 {
+    display: inline-block;
+    vertical-align: middle; }
+  .AppHeader-logo img {
+    width: 24px; }
+  .AppHeader-logo h1 {
+    font-size: 20px;
+    margin: 0 0 0 20px; }
+
+.AppHeader-actions {
+  /* Flex */
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
+.AppHeader-actionSearch {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: #EEEEEE;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 24px; }
+  .AppHeader-actionSearch input {
+    background: #EEEEEE;
+    border: none;
+    font-weight: 600;
+    height: 40px;
+    vertical-align: top;
+    /* Flex */
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+    .AppHeader-actionSearch input:focus {
+      outline: 0px; }
+  .AppHeader-actionSearch .icon-search {
+    color: #757575;
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 20px; }
+
+.AppHeader-actionUpload {
+  margin-left: 20px;
+  /* Flex */
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+  .AppHeader-actionUpload .btn-upload {
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    height: 48px;
+    width: 48px; }
+    .AppHeader-actionUpload .btn-upload:focus {
+      outline: 0px; }
+  .AppHeader-actionUpload .icon-backup {
+    color: #757575;
+    font-size: 24px; }
+
+.OptionList {
+  background: #ff4136;
+  width: 100%;
+  /* Flex */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.OptionList-top {
+  border-bottom: 1px solid #aaaaaa;
+  margin-bottom: 24px;
+  padding-bottom: 24px; }
+
+.OptionList-option {
+  background: #2ecc40;
+  display: block;
+  padding-left: 25px; }
 
 .header-section {
   display: block;
@@ -421,11 +602,19 @@ hr {
 
 .main-section {
   width: 100%;
-  height: 100%;
   /* Flex */
-  display: flex;
-  flex-wrap: nowrap;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
-  flex-direction: wrap; }
-
-/*# sourceMappingURL=style.css.map */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: wrap;
+  -ms-flex-direction: wrap;
+  flex-direction: wrap;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
