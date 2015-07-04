@@ -1,4 +1,13 @@
-.AppHeader {}
+.AppHeader {
+    // background: $black;
+    /* Flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+	flex-wrap: wrap;
+
+}
 
 .AppHeader-logo {}
 

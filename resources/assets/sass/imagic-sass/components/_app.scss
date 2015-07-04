@@ -1,24 +1,15 @@
 .App-header {
-	background: $gray;
+	background: $red;
+	padding: 15px 30px;
 	width: 100%;
 }
 
 .App-options {
-	background: $yellow;
-	width: 260px
+	background: $blue;
+	flex-basis: 260px;	// ancho estatico
 }
 
 .App-main {
-	background: $purple;
+	background: $yellow;
+	flex-grow: 1;	// toma todo el ancho restante
 }
-
-/**
-.PhotosApp {
-	background: $red;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	height: 100%;
-}
-
-**/

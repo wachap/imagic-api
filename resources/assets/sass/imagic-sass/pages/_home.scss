@@ -1,8 +1,15 @@
 .header-section {
-	background: $blue;
+	display: block;
 	width: 100%;
 }
 
 .main-section {
-	background: $orange;
+	width: 100%;
+	height: 100%;
+
+	/* Flex */
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	flex-direction: wrap;
 }
