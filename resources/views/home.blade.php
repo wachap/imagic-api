@@ -2,71 +2,77 @@
 
 @section('content')
 
-<section class="PhotosApp">
-
-	<!-- barra lateral izquierda -->
-	<section class="PhotosApp-nav">
-		<div class="OptionList">
-			<div class="OptionList-logo">
-				<img src="#" alt="#"/>
-			</div>
-			<div class="OptionList-options">
-				<div class="OptionList-optionsTop">
-					<a href="#" class="OptionList-option">
-						<div class="OptionList-optionIcon">
-							<span class="icon-image">I</span>							
-						</div>
-						<div class="OptionList-optionLabel">
-							<span>Fotos</span>							
-						</div>
-					</a>	
-				</div>
-				<div class="OptionList-optionsBottom">
-					<a href="#" class="OptionList-option">
-						<div class="OptionList-optionIcon">
-							<span class="icon-trash">T</span>
-						</div>
-						<div class="OptionList-optionLabel">
-							<span>Papelera</span>							
-						</div>						
-					</a>				
-				</div>
-			</div>			
-		</div>
-	</section>
-
-	<!-- seccion principal -->
-	<section class="PhotosApp-main">
-		<div class="PhotoList">
-			<div class="PhotoList-date">
-				<span>Hoy</span>
-			</div>
-			<div class="PhotoList-photos">
-				<div class="PhotoList-photo">
-					<button class="PhotoList-buttonSelect">
-						<span class="icon-check">C</span>						
-					</button>					
-					<a href="#" class="PhotoList-photoContainer">
-						<img src="#" alt="#"/>						
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+<header class="header-section">
 
 	<!-- barra superior -->
-	<section class="PhotosApp-options">
-		<div class="PhotoOptions">
-			<div class="PhotoOptions-search">
-				<input type="text" id="search" />
+	<div class="App-header">
+		<section class="AppHeader">
+			<div class="AppHeader-logo">
+				<img src="#" alt="#"/>
 			</div>
-			<div class="PhotoOptions-upload">
-				<button class="btn-upload" data-toggle="modal" data-target="#imageUploadModal">
-					<span class="icon-upload">U</span>
-				</button>
+			<div class="AppHeader-actions">
+				<div class="AppHeader-actionSearch">
+					<input type="text" id="search" />
+				</div>
+				<div class="AppHeader-actionUpload">
+					<button class="btn-upload" data-toggle="modal" data-target="#imageUploadModal">
+						<span class="icon-upload">U</span>
+					</button>
+				</div>			
+			</div>
+		</section>		
+	</div>
+</header>
+
+<section class="main-section">
+
+	<!-- barra lateral izquierda -->
+	<div class="App-options">		
+		<section class="OptionList">
+			<div class="OptionList-top">
+				<a href="#" class="OptionList-option">
+					<div class="OptionList-optionIcon">
+						<span class="icon-image">I</span>							
+					</div>
+					<div class="OptionList-optionLabel">
+						<span>Fotos</span>							
+					</div>
+				</a>	
+			</div>
+			<div class="OptionList-bottom">
+				<a href="#" class="OptionList-option">
+					<div class="OptionList-optionIcon">
+						<span class="icon-trash">T</span>
+					</div>
+					<div class="OptionList-optionLabel">
+						<span>Papelera</span>							
+					</div>						
+				</a>				
 			</div>			
-		</div>
-	</section>
+		</section>		
+	</div>
+	
+
+	<!-- seccion principal -->
+	<div class="App-main">
+		<section class="PhotoList-container">
+			<div class="PhotoList">
+				<div class="PhotoList-date">
+					<span>Hoy</span>
+				</div>
+				<div class="PhotoList-photos">
+					<div class="PhotoList-photo">
+						<button class="PhotoList-select">
+							<span class="icon-check">C</span>						
+						</button>					
+						<a href="#" class="PhotoList-image">
+							<img src="#" alt="#"/>						
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>		
+	</div>
 </section>
 
 <!--
