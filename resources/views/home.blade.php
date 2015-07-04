@@ -8,15 +8,17 @@
 	<div class="App-header">
 		<section class="AppHeader">
 			<div class="AppHeader-logo">
-				<img src="#" alt="#"/>
+				<img src="https://ssl.gstatic.com/social/photosui/images/logo_photos_color_96px.svg" alt="#"/>
+				<h1>iMagic</h1>
 			</div>
 			<div class="AppHeader-actions">
 				<div class="AppHeader-actionSearch">
-					<input type="text" id="search" />
+					<span class="icon-search"></span>
+					<input type="text" id="search" placeholder="Buscar"/>
 				</div>
 				<div class="AppHeader-actionUpload">
 					<button class="btn-upload" data-toggle="modal" data-target="#imageUploadModal">
-						<span class="icon-upload">U</span>
+						<span class="icon-backup"></span>
 					</button>
 				</div>
 			</div>
@@ -32,7 +34,7 @@
 			<div class="OptionList-top">
 				<a href="#" class="OptionList-option">
 					<div class="OptionList-optionIcon">
-						<span class="icon-image">I</span>
+						<span class="icon-insert_photo"></span>
 					</div>
 					<div class="OptionList-optionLabel">
 						<span>Fotos</span>
@@ -42,7 +44,7 @@
 			<div class="OptionList-bottom">
 				<a href="#" class="OptionList-option">
 					<div class="OptionList-optionIcon">
-						<span class="icon-trash">T</span>
+						<span class="icon-delete"></span>
 					</div>
 					<div class="OptionList-optionLabel">
 						<span>Papelera</span>
@@ -63,10 +65,10 @@
 				<div class="PhotoList-photos">
 					<div class="PhotoList-photo">
 						<button class="PhotoList-select">
-							<span class="icon-check">C</span>
+							<span class="icon-check_circle"></span>
 						</button>
 						<a href="#" class="PhotoList-image">
-							<img src="#" alt="#"/>
+							<img src="/images/js-logo.png" alt="#"/>
 						</a>
 					</div>
 				</div>
