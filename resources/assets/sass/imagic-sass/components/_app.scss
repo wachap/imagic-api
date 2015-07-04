@@ -1,15 +1,19 @@
 .App-header {
-	background: $red;
-	padding: 15px 30px;
+	background: $white;
+	padding: 5px 30px;
 	width: 100%;
 }
 
 .App-options {
-	background: $blue;
+	/* Flex */
+	align-items: stretch;
+	display: flex;
 	flex-basis: 260px;	// ancho estatico
 }
 
 .App-main {
 	background: $yellow;
+
+	/* Flex */
 	flex-grow: 1;	// toma todo el ancho restante
 }

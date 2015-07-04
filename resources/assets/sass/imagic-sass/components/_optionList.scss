@@ -1,10 +1,26 @@
-.OptionList {}
+.OptionList {
+	background: $red;
+	width: 100%;
 
-.OptionList-top {}
+	/* Flex */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.OptionList-top {
+	border-bottom: 1px solid $gray;
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+}
 
 .OptionList-bottom {}
 
-.OptionList-option {}
+.OptionList-option {
+	background: $green;
+	display: block;
+	padding-left: 25px;
+}
 
 .OptionList-optionIcon {}
 

@@ -1,5 +1,4 @@
 .AppHeader {
-    // background: $black;
     /* Flex */
     display: flex;
     justify-content: space-between;
@@ -9,10 +8,73 @@
 
 }
 
-.AppHeader-logo {}
+.AppHeader-logo {
+	img,
+	h1 {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	img {
+		width: 24px;
+	}
+	h1 {
+		font-size: 20px;
+		margin: 0 0 0 20px;
+	}	
+	/* Flex */
+	flex-grow: 0.5;
+}
 
-.AppHeader-actions {}
+.AppHeader-actions {
+	/* Flex */
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+}
 
-.AppHeader-actionSearch {}
+.AppHeader-actionSearch {	
+	flex-grow: 1;
+	background: $actionSearch-bg;
+	display: flex;
+	padding: 0 24px;
+	input {
+		background: $actionSearch-bg;
+		border: none;
+		font-weight: 600;
+		height: 40px;
+		vertical-align: top;
 
-.AppHeader-actionUpload {}
+		/* Flex */
+		flex-grow: 1;
+		&:focus {
+			outline:0px;
+		}
+	}
+	.icon-search {
+		color: $colorIcon-primary;
+		font-size: 24px;
+		line-height: 40px;
+		margin-right: 20px;
+	}
+}
+
+.AppHeader-actionUpload {	
+	margin-left: 20px;
+
+	/* Flex */
+	flex-grow: 1;
+	.btn-upload {
+		background: $transparent;
+		border-radius: 50%;
+		border: none;
+		height: 48px;
+		width: 48px;
+		&:focus {
+			outline:0px;
+		}
+	}
+	.icon-backup {
+		color: $colorIcon-primary;
+		font-size: 24px;
+	}
+}

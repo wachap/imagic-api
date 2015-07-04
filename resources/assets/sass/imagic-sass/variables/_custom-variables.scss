@@ -23,11 +23,16 @@ $button-min-width : 88px;
 /// @type Length
 $max-width: 100% !default;
 
+// App
+$actionSearch-bg: #EEEEEE;
 
+// Icon
+$colorIcon-primary: #757575;
+$colorIcon-secondary: $white;
 
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/public/' !default;
+$base-url: '../' !default;
