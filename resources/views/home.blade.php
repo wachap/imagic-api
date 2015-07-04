@@ -18,26 +18,26 @@
 					<button class="btn-upload" data-toggle="modal" data-target="#imageUploadModal">
 						<span class="icon-upload">U</span>
 					</button>
-				</div>			
+				</div>
 			</div>
-		</section>		
+		</section>
 	</div>
 </header>
 
 <section class="main-section">
 
 	<!-- barra lateral izquierda -->
-	<div class="App-options">		
+	<div class="App-options">
 		<section class="OptionList">
 			<div class="OptionList-top">
 				<a href="#" class="OptionList-option">
 					<div class="OptionList-optionIcon">
-						<span class="icon-image">I</span>							
+						<span class="icon-image">I</span>
 					</div>
 					<div class="OptionList-optionLabel">
-						<span>Fotos</span>							
+						<span>Fotos</span>
 					</div>
-				</a>	
+				</a>
 			</div>
 			<div class="OptionList-bottom">
 				<a href="#" class="OptionList-option">
@@ -45,13 +45,13 @@
 						<span class="icon-trash">T</span>
 					</div>
 					<div class="OptionList-optionLabel">
-						<span>Papelera</span>							
-					</div>						
-				</a>				
-			</div>			
-		</section>		
+						<span>Papelera</span>
+					</div>
+				</a>
+			</div>
+		</section>
 	</div>
-	
+
 
 	<!-- seccion principal -->
 	<div class="App-main">
@@ -63,15 +63,15 @@
 				<div class="PhotoList-photos">
 					<div class="PhotoList-photo">
 						<button class="PhotoList-select">
-							<span class="icon-check">C</span>						
-						</button>					
+							<span class="icon-check">C</span>
+						</button>
 						<a href="#" class="PhotoList-image">
-							<img src="#" alt="#"/>						
+							<img src="#" alt="#"/>
 						</a>
 					</div>
 				</div>
 			</div>
-		</section>		
+		</section>
 	</div>
 </section>
 
