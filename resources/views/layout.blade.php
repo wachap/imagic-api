@@ -14,7 +14,8 @@
     <!-- Twitter Cards -->
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="//ssl.gstatic.com/social/photosui/images/logo_photos_color_192.png" sizes="192x192"/>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     @yield('content')
