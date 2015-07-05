@@ -32,9 +32,9 @@
 	<div class="App-options">
 		<section class="OptionList">
 			<div class="OptionList-top">
-				<a href="#" class="OptionList-option">
+				<a href="#" class="OptionList-option is-select">
 					<div class="OptionList-optionIcon">
-						<span class="icon-insert_photo"></span>
+						<span class="icon icon-insert_photo"></span>
 					</div>
 					<div class="OptionList-optionLabel">
 						<span>Fotos</span>
@@ -44,7 +44,7 @@
 			<div class="OptionList-bottom">
 				<a href="#" class="OptionList-option">
 					<div class="OptionList-optionIcon">
-						<span class="icon-delete"></span>
+						<span class="icon icon-delete"></span>
 					</div>
 					<div class="OptionList-optionLabel">
 						<span>Papelera</span>
