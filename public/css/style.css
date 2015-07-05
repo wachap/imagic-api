@@ -169,6 +169,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -236,7 +237,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -296,6 +298,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -358,7 +362,6 @@ th {
   src: url("../fonts/icomoon.eot?#iefixcr9etf") format("embedded-opentype"), url("../fonts/icomoon.ttf?cr9etf") format("truetype"), url("../fonts/icomoon.woff?cr9etf") format("woff"), url("../fonts/icomoon.svg?cr9etf#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -445,11 +448,7 @@ html {
 body {
   font-size: 16px;
   /* Flex */
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column; }
 
 hr {
@@ -465,45 +464,26 @@ hr {
 
 .App-options {
   /* Flex */
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-basis: 260px;
-  -ms-flex-preferred-size: 260px;
   flex-basis: 260px; }
 
 .App-main {
   background: #ffdc00;
+  overflow-y: scroll;
   /* Flex */
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .AppHeader {
   /* Flex */
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .AppHeader-logo {
   /* Flex */
-  -webkit-flex-grow: 0.5;
-  -ms-flex-positive: 0.5;
   flex-grow: 0.5; }
   .AppHeader-logo img,
   .AppHeader-logo h1 {
@@ -517,23 +497,13 @@ hr {
 
 .AppHeader-actions {
   /* Flex */
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .AppHeader-actionSearch {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   background: #EEEEEE;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 24px; }
   .AppHeader-actionSearch input {
@@ -543,8 +513,6 @@ hr {
     height: 40px;
     vertical-align: top;
     /* Flex */
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1; }
     .AppHeader-actionSearch input:focus {
       outline: 0px; }
@@ -557,8 +525,6 @@ hr {
 .AppHeader-actionUpload {
   margin-left: 20px;
   /* Flex */
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1; }
   .AppHeader-actionUpload .btn-upload {
     background: transparent;
@@ -573,48 +539,57 @@ hr {
     font-size: 24px; }
 
 .OptionList {
-  background: #ff4136;
+  background: #ffffff;
   width: 100%;
   /* Flex */
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center; }
 
 .OptionList-top {
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #E1E1E1;
   margin-bottom: 24px;
   padding-bottom: 24px; }
 
 .OptionList-option {
-  background: #2ecc40;
-  display: block;
-  padding-left: 25px; }
+  text-decoration: none;
+  background: #ffffff;
+  padding: 12px 12px 12px 25px;
+  /* Flex */
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .OptionList-option:hover {
+    background: #F5F5F5; }
+
+.OptionList-optionIcon .icon {
+  vertical-align: middle;
+  font-size: 24px;
+  color: #757575; }
+
+.OptionList-optionLabel {
+  color: #000000;
+  font-weight: bold;
+  margin-left: 30px; }
+
+.is-select {
+  background: #F5F5F5; }
+  .is-select .OptionList-optionIcon .icon,
+  .is-select .OptionList-optionLabel {
+    color: #4285F4; }
 
 .header-section {
   display: block;
-  width: 100%; }
+  width: 100%;
+  /* Flex */ }
 
 .main-section {
   width: 100%;
   /* Flex */
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: wrap;
-  -ms-flex-direction: wrap;
   flex-direction: wrap;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
+
+/*# sourceMappingURL=style.css.map */
