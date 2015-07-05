@@ -13,6 +13,7 @@
 
 .App-main {
 	background: $yellow;
+	overflow-y: scroll;
 
 	/* Flex */
 	flex-grow: 1;	// toma todo el ancho restante

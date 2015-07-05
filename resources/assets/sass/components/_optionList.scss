@@ -1,5 +1,5 @@
 .OptionList {
-	background: $red;
+	background: $white;
 	width: 100%;
 
 	/* Flex */
@@ -9,7 +9,7 @@
 }
 
 .OptionList-top {
-	border-bottom: 1px solid $gray;
+	border-bottom: 1px solid #E1E1E1;
 	margin-bottom: 24px;
 	padding-bottom: 24px;
 }
@@ -17,11 +17,40 @@
 .OptionList-bottom {}
 
 .OptionList-option {
-	background: $green;
-	display: block;
-	padding-left: 25px;
+	text-decoration: none;
+	background: $app-primaryColor;
+	padding: 12px 12px 12px 25px;
+
+	/* Flex */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&:hover {
+		background: $app-quaternaryColor;
+	}
+
 }
 
-.OptionList-optionIcon {}
+.OptionList-optionIcon {
+	.icon {
+		vertical-align: middle;
+		font-size: 24px;
+		color: $app-secondaryColor;
+	}
+}
 
-.OptionList-optionLabel {}
+.OptionList-optionLabel {
+	color: $black;
+	font-weight: bold;
+	margin-left: 30px;
+}
+
+.is-select {
+	background: $app-quaternaryColor;
+
+	.OptionList-optionIcon .icon,
+	.OptionList-optionLabel {
+		color: $app-tertiaryColor;
+	}
+}
