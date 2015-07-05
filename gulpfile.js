@@ -13,7 +13,7 @@ var elixir = require('laravel-elixir');
 elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.sass('app.scss', 'public/css/style.css');
+    mix.sass('main.scss', 'public/css/style.css');
 });
 
 elixir(function(mix) {
