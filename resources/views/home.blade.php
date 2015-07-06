@@ -27,53 +27,128 @@
 </header>
 
 <section class="main-section">
+	<div class="main-section-container">
 
-	<!-- barra lateral izquierda -->
-	<div class="App-options">
-		<section class="OptionList">
-			<div class="OptionList-top">
-				<a href="#" class="OptionList-option is-select">
-					<div class="OptionList-optionIcon">
-						<span class="icon icon-insert_photo"></span>
-					</div>
-					<div class="OptionList-optionLabel">
-						<span>Fotos</span>
-					</div>
-				</a>
-			</div>
-			<div class="OptionList-bottom">
-				<a href="#" class="OptionList-option">
-					<div class="OptionList-optionIcon">
-						<span class="icon icon-delete"></span>
-					</div>
-					<div class="OptionList-optionLabel">
-						<span>Papelera</span>
-					</div>
-				</a>
-			</div>
-		</section>
-	</div>
-
-
-	<!-- seccion principal -->
-	<div class="App-main">
-		<section class="PhotoList-container">
-			<div class="PhotoList">
-				<div class="PhotoList-date">
-					<span>Hoy</span>
+		<!-- barra lateral izquierda -->
+		<div class="App-options">
+			<section class="OptionList">
+				<div class="OptionList-top">
+					<a href="#" class="OptionList-option is-select">
+						<div class="OptionList-optionIcon">
+							<span class="icon icon-insert_photo"></span>
+						</div>
+						<div class="OptionList-optionLabel">
+							<span>Fotos</span>
+						</div>
+					</a>
 				</div>
-				<div class="PhotoList-photos">
-					<div class="PhotoList-photo">
-						<button class="PhotoList-select">
-							<span class="icon-check_circle"></span>
-						</button>
-						<a href="#" class="PhotoList-image">
-							<img src="/images/js-logo.png" alt="#"/>
-						</a>
+				<div class="OptionList-bottom">
+					<a href="#" class="OptionList-option">
+						<div class="OptionList-optionIcon">
+							<span class="icon icon-delete"></span>
+						</div>
+						<div class="OptionList-optionLabel">
+							<span>Papelera</span>
+						</div>
+					</a>
+				</div>
+			</section>
+		</div>
+
+		<!-- seccion principal -->
+		<div class="App-main">
+			<section class="PhotoList-container">
+				<div class="PhotoList">
+					<div class="PhotoList-date">
+						<span>Hoy</span>
+					</div>
+					<div class="PhotoList-photos">
+						<div class="PhotoList-photo is-select">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+							<div class="PhotoList-shadow"></div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+
+				<div class="PhotoList">
+					<div class="PhotoList-date">
+						<span>Hoy</span>
+					</div>
+					<div class="PhotoList-photos">
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div><div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+						<div class="PhotoList-photo">
+							<button class="PhotoList-select">
+								<span class="icon-check_circle"></span>
+							</button>
+							<a href="#" class="PhotoList-image">
+								<img src="/images/js-logo.png" alt="#"/>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+
 	</div>
 </section>
 
