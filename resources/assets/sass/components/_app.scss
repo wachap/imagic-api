@@ -5,16 +5,12 @@
 }
 
 .App-options {
-	/* Flex */
-	align-items: stretch;
-	display: flex;
-	flex-basis: 260px;	// ancho estatico
+	overflow-y: auto;
+	width: 260px;
 }
 
 .App-main {
 	background: $yellow;
-	overflow-y: scroll;
-
-	/* Flex */
-	flex-grow: 1;	// toma todo el ancho restante
+	overflow-y: auto;
+	width: calc(100% - 260px)
 }

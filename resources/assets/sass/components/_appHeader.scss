@@ -1,11 +1,10 @@
 .AppHeader {
     /* Flex */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
 	flex-wrap: wrap;
-
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .AppHeader-logo {
@@ -20,7 +19,7 @@
 	h1 {
 		font-size: 20px;
 		margin: 0 0 0 20px;
-	}	
+	}
 	/* Flex */
 	flex-grow: 0.5;
 }
@@ -32,11 +31,12 @@
 	flex-grow: 1;
 }
 
-.AppHeader-actionSearch {	
-	flex-grow: 1;
+.AppHeader-actionSearch {
 	background: $actionSearch-bg;
 	display: flex;
+	flex-grow: 1;
 	padding: 0 24px;
+
 	input {
 		background: $actionSearch-bg;
 		border: none;
@@ -58,7 +58,7 @@
 	}
 }
 
-.AppHeader-actionUpload {	
+.AppHeader-actionUpload {
 	margin-left: 20px;
 
 	/* Flex */

@@ -1,11 +1,8 @@
 .OptionList {
 	background: $white;
+	height: calc(100% - 100px);
+	margin-top: 100px;
 	width: 100%;
-
-	/* Flex */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .OptionList-top {
@@ -17,26 +14,35 @@
 .OptionList-bottom {}
 
 .OptionList-option {
-	text-decoration: none;
 	background: $app-primaryColor;
 	padding: 12px 12px 12px 25px;
+	text-decoration: none;
 
 	/* Flex */
+	align-items: center;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 
 	&:hover {
 		background: $app-quaternaryColor;
+	}
+
+	&.is-select {
+		background: $app-quaternaryColor;
+
+		.OptionList-optionIcon .icon,
+		.OptionList-optionLabel {
+			color: $app-tertiaryColor;
+		}
 	}
 
 }
 
 .OptionList-optionIcon {
 	.icon {
-		vertical-align: middle;
-		font-size: 24px;
 		color: $app-secondaryColor;
+		font-size: 24px;
+		vertical-align: middle;
 	}
 }
 
@@ -44,13 +50,4 @@
 	color: $black;
 	font-weight: bold;
 	margin-left: 30px;
-}
-
-.is-select {
-	background: $app-quaternaryColor;
-
-	.OptionList-optionIcon .icon,
-	.OptionList-optionLabel {
-		color: $app-tertiaryColor;
-	}
 }

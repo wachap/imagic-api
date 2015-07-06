@@ -1,20 +1,27 @@
 .header-section {
 	display: block;
 	width: 100%;
-
-	/* Flex */
-	// flex-basis: 58px;
-	// flex-grow: 2;
-	// height: 58px;
+	box-shadow: 0 0 8px 4px rgba(0,0,0,0.2);
+	z-index: 9999 !important;
 }
 
 .main-section {
+	position: relative;
 	width: 100%;
+
+	/* Flex */
+	flex-grow: 1;	// toma todo el ancho restante
+}
+
+.main-section-container {
+	position: absolute;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
 	/* Flex */
 	align-items: stretch;
 	display: flex;
-	flex-direction: wrap;
-	flex-grow: 1;	// toma todo el ancho restante
-	flex-wrap: nowrap;
+	flex-direction: row;
 }
