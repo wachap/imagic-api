@@ -463,24 +463,21 @@ hr {
   width: 100%; }
 
 .App-options {
-  /* Flex */
-  align-items: stretch;
-  display: flex;
-  flex-basis: 260px; }
+  overflow-y: auto;
+  width: 260px; }
 
 .App-main {
   background: #ffdc00;
-  overflow-y: scroll;
-  /* Flex */
-  flex-grow: 1; }
+  overflow-y: auto;
+  width: calc(100% - 260px); }
 
 .AppHeader {
   /* Flex */
-  display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  justify-content: space-between; }
 
 .AppHeader-logo {
   /* Flex */
@@ -502,9 +499,9 @@ hr {
   flex-grow: 1; }
 
 .AppHeader-actionSearch {
-  flex-grow: 1;
   background: #EEEEEE;
   display: flex;
+  flex-grow: 1;
   padding: 0 24px; }
   .AppHeader-actionSearch input {
     background: #EEEEEE;
@@ -540,11 +537,9 @@ hr {
 
 .OptionList {
   background: #ffffff;
-  width: 100%;
-  /* Flex */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  height: calc(100% - 100px);
+  margin-top: 100px;
+  width: 100%; }
 
 .OptionList-top {
   border-bottom: 1px solid #E1E1E1;
@@ -552,44 +547,119 @@ hr {
   padding-bottom: 24px; }
 
 .OptionList-option {
-  text-decoration: none;
   background: #ffffff;
   padding: 12px 12px 12px 25px;
+  text-decoration: none;
   /* Flex */
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  align-items: center; }
+  flex-direction: row; }
   .OptionList-option:hover {
     background: #F5F5F5; }
+  .OptionList-option.is-select {
+    background: #F5F5F5; }
+    .OptionList-option.is-select .OptionList-optionIcon .icon,
+    .OptionList-option.is-select .OptionList-optionLabel {
+      color: #4285F4; }
 
 .OptionList-optionIcon .icon {
-  vertical-align: middle;
+  color: #757575;
   font-size: 24px;
-  color: #757575; }
+  vertical-align: middle; }
 
 .OptionList-optionLabel {
   color: #000000;
   font-weight: bold;
   margin-left: 30px; }
 
-.is-select {
-  background: #F5F5F5; }
-  .is-select .OptionList-optionIcon .icon,
-  .is-select .OptionList-optionLabel {
-    color: #4285F4; }
+.PhotoList {
+  background: #ff4136;
+  margin-top: 20px;
+  /* Flex */
+  display: flex;
+  flex-direction: column; }
 
+.PhotoList-container {
+  background: #ffffff;
+  margin-top: 60px;
+  padding: 0 24px 24px 24px;
+  /* Flex */
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.PhotoList-photos {
+  /* Flex */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.PhotoList-photo {
+  background: #F5F5F5;
+  margin-top: 10px;
+  position: relative; }
+  .PhotoList-photo.is-select .PhotoList-image {
+    transform: scale(0.8); }
+
+.PhotoList-select {
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  z-index: 9999 !important; }
+
+.PhotoList-image {
+  display: block;
+  height: 220px;
+  /* transition */
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transition-timing-function: ease-out; }
+  .PhotoList-image img {
+    height: 220px; }
+
+.PhotoList-shadow {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.26), transparent 56px, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.26), transparent 56px, transparent);
+  bottom: 0;
+  display: none;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+/**
+1) agregar estilos al boton
+2) cambiar is-select
+
+**/
+/** Shadows
+background-image: linear-gradient(to bottom,rgba(0,0,0,0.26),transparent 56px,transparent),linear-gradient(to top,rgba(0,0,0,0.26),transparent 56px,transparent);
+
+background-image: linear-gradient(to bottom,rgba(0,0,0,0.26),transparent 56px,transparent);
+**/
 .header-section {
   display: block;
   width: 100%;
-  /* Flex */ }
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999 !important; }
 
 .main-section {
+  position: relative;
   width: 100%;
+  /* Flex */
+  flex-grow: 1; }
+
+.main-section-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   /* Flex */
   align-items: stretch;
   display: flex;
-  flex-direction: wrap;
-  flex-grow: 1;
-  flex-wrap: nowrap; }
+  flex-direction: row; }
 
 /*# sourceMappingURL=style.css.map */
