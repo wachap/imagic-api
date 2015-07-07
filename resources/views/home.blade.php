@@ -24,27 +24,44 @@
 			</div>
 		</section>
 
-		<section class="AppHeader AppHeader--select">
-			<div class="AppHeader-left">				
+		<section class="AppHeader AppHeader--select is-hidden">
+			<div class="AppHeader-left">
 				<div class="AppHeader-action">
-					<button class="appButton icon-close"></button>											
+					<button class="appButton--white icon-close"></button>
 				</div>
-				<span class="AppHeader-label">1 Seleccionado</span>
+				<span class="AppHeader-label">1 Seleccionada</span>
 			</div>
 			<div class="AppHeader-right">
 				<div class="AppHeader-action">
-					<button class="appButton icon-delete"></button>		
+					<button class="appButton--white icon-delete"></button>
+				</div>
+				<div class="AppHeader-action">
+					<button class="appButton--white icon-get_app"></button>
 				</div>
 			</div>
 		</section>
 
-		<section class="AppHeader AppHeader--view is-hidden">
-			<div class="AppHeader-left">				
-				<span class="AppHeader-Icon icon-arrow_back">B</span>
+		<section class="AppHeader AppHeader--view">
+			<div class="AppHeader-left">
+				<div class="AppHeader-action">
+					<button class="appButton--white icon-arrow_back"></button>
+				</div>
 			</div>
 			<div class="AppHeader-right">
 				<div class="AppHeader-action">
-					<span class="icon-delete">D</span>
+					<button class="appButton--white icon-insert_link"></button>
+				</div>
+				<div class="AppHeader-action">
+					<button class="appButton--white icon-edit"></button>
+				</div>
+				<div class="AppHeader-action">
+					<button class="appButton--white icon-info"></button>
+				</div>
+				<div class="AppHeader-action">
+					<button class="appButton--white icon-delete"></button>
+				</div>
+				<div class="AppHeader-action">
+					<button class="appButton--white icon-get_app"></button>
 				</div>
 			</div>
 		</section>
@@ -89,89 +106,47 @@
 						<span>Hoy</span>
 					</div>
 					<div class="PhotoList-photos">
-						<div class="PhotoList-photo is-select">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
-							<a href="#" class="PhotoList-image">
-								<img src="/images/js-logo.png" alt="#"/>
-							</a>
-							<div class="PhotoList-shadow"></div>
-						</div>
-					</div>
-				</div>
-
-				<div class="PhotoList">
-					<div class="PhotoList-date">
-						<span>Hoy</span>
-					</div>
-					<div class="PhotoList-photos">
 						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
 						</div>
 						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
 						</div>
 						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
 						</div>
 						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
 						</div><div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
-						</div>
-						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+						</div><div class="PhotoList-photo">
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
-						</div>
-						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
-							<a href="#" class="PhotoList-image">
-								<img src="/images/js-logo.png" alt="#"/>
-							</a>
-						</div>
-						<div class="PhotoList-photo">
-							<button class="PhotoList-select">
-								<span class="icon-check_circle"></span>
-							</button>
+						</div><div class="PhotoList-photo">
+							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
 						</div>
 					</div>
 				</div>
-
 			</section>
 		</div>
 
