@@ -1,30 +1,32 @@
-.AppHeader {
-    /* Flex */
+.AppHeader {	
+	padding: 5px 30px;
+
+	/* Flex */
+	align-items: center;
+	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
-.AppHeader-logo {
-	img,
-	h1 {
-		display: inline-block;
-		vertical-align: middle;
-	}
-	img {
-		width: 24px;
-	}
-	h1 {
-		font-size: 20px;
-		margin: 0 0 0 20px;
-	}
+.AppHeader-left {
 	/* Flex */
+	align-items: center;
+	display: flex;
+	flex-direction: row;
 	flex-grow: 0.5;
 }
 
-.AppHeader-actions {
+.AppHeader-logo {
+	width: 24px;
+}
+
+.AppHeader-label {
+	font-size: 20px;
+	margin: 0 0 0 20px;
+}
+
+.AppHeader-center {
 	/* Flex */
 	align-items: center;
 	display: flex;
@@ -46,6 +48,7 @@
 
 		/* Flex */
 		flex-grow: 1;
+
 		&:focus {
 			outline:0px;
 		}
@@ -63,18 +66,36 @@
 
 	/* Flex */
 	flex-grow: 1;
+
 	.btn-upload {
 		background: $transparent;
 		border-radius: 50%;
 		border: none;
 		height: 48px;
 		width: 48px;
+
 		&:focus {
 			outline:0px;
 		}
 	}
+
 	.icon-backup {
 		color: $colorIcon-primary;
 		font-size: 24px;
+	}
+}
+
+.AppHeader--select {
+	background: #4285F4;
+	color: $white;
+
+	.appButton {		
+		&:after {
+			background: rgba($white, 0.1);			
+		}
+		
+		&:active {
+			background: rgba($white, 0.1);			
+		}
 	}
 }
