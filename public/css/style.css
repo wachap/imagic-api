@@ -535,15 +535,22 @@ hr {
 How it work
 <button class="appButton icon-delete"></button>
 **/
-.AppCheck {
-  text-align: center;
-  height: 48px;
-  width: 48px;
+.AppCheck-label {
+  height: 24px;
+  opacity: 0.5;
   position: relative;
+  text-align: center;
+  width: 24px;
+  /* Transition */
+  transition-duration: 0.15s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
   /* Sombra */
   /* Icono */ }
-  .AppCheck::after {
-    background: rgba(0, 0, 0, 0.2);
+  .AppCheck-label:hover {
+    opacity: 1; }
+  .AppCheck-label::after {
+    background: rgba(177, 13, 201, 0.3);
     border-radius: 50%;
     content: "";
     height: 0;
@@ -558,8 +565,8 @@ How it work
     transition-duration: 0.15s;
     transition-property: background, height, width, opacity;
     transition-timing-function: ease-out; }
-  .AppCheck::before {
-    line-height: 48px;
+  .AppCheck-label::before {
+    line-height: 24px;
     color: #ffffff;
     font-size: 24px;
     /* Posicion */
@@ -569,19 +576,24 @@ How it work
     transition-duration: 0.15s;
     transition-property: color;
     transition-timing-function: ease-out; }
-  .AppCheck:checked {
+  .AppCheck-label::selection {
+    background: transparent; }
+
+.AppCheck-input {
+  visibility: hidden; }
+  .AppCheck-input:checked ~ .AppCheck-label {
     /* Sombra */
     /* Icono */ }
-    .AppCheck:checked::after {
-      height: 48px;
-      opacity: 1;
-      width: 48px; }
-    .AppCheck:checked::before {
+    .AppCheck-input:checked ~ .AppCheck-label::after {
+      height: 24px;
+      width: 100%; }
+    .AppCheck-input:checked ~ .AppCheck-label::before {
       color: #0074d9; }
 
 /**
 How it works
-<input type="checkbox" class="AppCheck icon-check_circle" />
+<input id="same" type="checkbox" class="AppCheck-input" />
+<label  for="same" class="AppCheck icon-check_circle"></label>
 **/
 .AppHeader {
   padding: 5px 30px;
@@ -736,10 +748,23 @@ How it works
 
 .PhotoList-photo {
   background: #F5F5F5;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   margin-top: 5px;
-  position: relative; }
-  .PhotoList-photo.is-select .PhotoList-image {
-    transform: scale(0.8); }
+  position: relative;
+  z-index: 1;
+  /* Sombra top */ }
+  .PhotoList-photo:hover::before {
+    opacity: 1; }
+  .PhotoList-photo::before {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.26), transparent 56px, transparent);
+    content: "";
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 15; }
 
 .PhotoList-checkBox {
   /* Posicion */
@@ -747,16 +772,31 @@ How it works
   position: absolute;
   top: 5px;
   z-index: 9999 !important; }
+  .PhotoList-checkBox:checked ~ .PhotoList-image {
+    transform: scale(0.85); }
 
 .PhotoList-image {
   display: block;
   height: 220px;
+  position: relative;
   /* transition */
   transition-duration: 0.2s;
   transition-property: transform;
   transition-timing-function: ease-out; }
   .PhotoList-image img {
     height: 220px; }
+
+.PhotoList-photoTitle {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  /* Posicion */
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0; }
 
 .PhotoList-shadow {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.26), transparent 56px, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.26), transparent 56px, transparent);
