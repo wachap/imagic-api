@@ -1,18 +1,28 @@
-$appCheck-size: 48px;
-$appCheck-bg: $black;
+$appCheck-size: 24px;
+$appCheck-bg: $purple;
 $appCheck-color: $white;
 $appCheck-colorChecked: $blue;
 $appCheck-fontSize: 24px;
 
-.AppCheck {
-    text-align: center;
+.AppCheck-label {
     height: $appCheck-size;
-    width: $appCheck-size;
+    opacity: 0.5;
     position: relative;
+    text-align: center;
+    width: $appCheck-size;
+
+    /* Transition */
+    transition-duration: 0.15s;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+
+    &:hover {
+        opacity: 1;
+    }
 
     /* Sombra */
     &::after {
-        background: rgba($appCheck-bg, 0.2);
+        background: rgba($appCheck-bg, 0.3);
 		border-radius: 50%;
 		content: "";
 		height: 0;
@@ -47,12 +57,20 @@ $appCheck-fontSize: 24px;
 		transition-timing-function: ease-out;
     }
 
-    &:checked {
+    &::selection {
+        background: $transparent;
+    }
+}
+
+.AppCheck-input {
+    visibility: hidden;
+
+    &:checked ~ .AppCheck-label {
         /* Sombra */
         &::after {
-            height: $appButton-size;
-			opacity: 1;
-			width: $appButton-size;
+            height: $appCheck-size;
+            // opacity: 1;
+            width: 100%;
         }
 
         /* Icono */
@@ -62,7 +80,11 @@ $appCheck-fontSize: 24px;
     }
 }
 
+
+
+
 /**
 How it works
-<input type="checkbox" class="AppCheck icon-check_circle" />
+<input id="same" type="checkbox" class="AppCheck-input" />
+<label  for="same" class="AppCheck icon-check_circle"></label>
 **/
