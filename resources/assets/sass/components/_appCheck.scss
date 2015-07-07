@@ -1,0 +1,68 @@
+$appCheck-size: 48px;
+$appCheck-bg: $black;
+$appCheck-color: $white;
+$appCheck-colorChecked: $blue;
+$appCheck-fontSize: 24px;
+
+.AppCheck {
+    text-align: center;
+    height: $appCheck-size;
+    width: $appCheck-size;
+    position: relative;
+
+    /* Sombra */
+    &::after {
+        background: rgba($appCheck-bg, 0.2);
+		border-radius: 50%;
+		content: "";
+		height: 0;
+		width: 0;
+
+		/* Posicion */
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 11;
+
+		/* Transition */
+	    transition-duration: 0.15s;
+	    transition-property: background, height, width, opacity;
+	    transition-timing-function: ease-out;
+    }
+
+    /* Icono */
+    &::before {
+        line-height: $appCheck-size;
+        color: $appCheck-color;
+		font-size: $appCheck-fontSize;
+
+		/* Posicion */
+		position: relative;
+		z-index: 12;
+
+		/* Transition */
+		transition-duration: 0.15s;
+		transition-property: color;
+		transition-timing-function: ease-out;
+    }
+
+    &:checked {
+        /* Sombra */
+        &::after {
+            height: $appButton-size;
+			opacity: 1;
+			width: $appButton-size;
+        }
+
+        /* Icono */
+        &::before {
+            color: $appCheck-colorChecked;
+        }
+    }
+}
+
+/**
+How it works
+<input type="checkbox" class="AppCheck icon-check_circle" />
+**/
