@@ -1,0 +1,71 @@
+$appButton-size: 48px;
+$appButton-bg: $black;
+$appButton-color: $white;
+$appButton-fontSize: 24px;
+
+.appButton {	
+	background: $transparent;
+	border-radius: 50%;
+	border: none;
+	height: $appButton-size;
+	overflow: hidden;
+	width: $appButton-size;
+
+	/* Posicion */
+	position: relative;
+	z-index: 9999 !important;
+
+	/* Transition */
+    transition-duration: 0.15s;
+    transition-property: background;
+    transition-timing-function: ease-out;
+
+	&:focus {
+		outline:0px;
+	}
+
+	&:active {		
+		background: rgba($appButton-bg, 0.1);
+
+		&:after {
+			height: $appButton-size;
+			opacity: 1;		
+			width: $appButton-size;
+		}
+	}
+
+	&:after {
+		background: rgba($appButton-bg, 0.2);
+		border-radius: 50%;
+		content: "";
+		height: 0;		
+		width: 0;		
+
+		/* Posicion */
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 11;
+
+		/* Transition */
+	    transition-duration: 0.15s;
+	    transition-property: background, height, width, opacity;
+	    transition-timing-function: ease-out;
+	}
+
+	&:before {
+		color: $appButton-color;
+		font-size: $appButton-fontSize;
+
+		/* Posicion */
+		position: relative;
+		z-index: 12;
+	}
+
+}
+
+/**
+How it work
+<button class="appButton icon-delete"></button>
+**/
