@@ -6,12 +6,12 @@
 
 	<!-- barra superior -->
 	<div class="App-header">
-		<section class="AppHeader">
-			<div class="AppHeader-logo">
-				<img src="https://ssl.gstatic.com/social/photosui/images/logo_photos_color_96px.svg" alt="#"/>
-				<h1>iMagic</h1>
+		<section class="AppHeader is-hidden">
+			<div class="AppHeader-left">
+				<img class="AppHeader-logo" src="https://ssl.gstatic.com/social/photosui/images/logo_photos_color_96px.svg" alt="#"/>
+				<h1 class="AppHeader-label">iMagic</h1>
 			</div>
-			<div class="AppHeader-actions">
+			<div class="AppHeader-center">
 				<div class="AppHeader-actionSearch">
 					<span class="icon-search"></span>
 					<input type="text" id="search" placeholder="Buscar"/>
@@ -23,6 +23,32 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="AppHeader AppHeader--select">
+			<div class="AppHeader-left">				
+				<div class="AppHeader-action">
+					<button class="appButton icon-close"></button>											
+				</div>
+				<span class="AppHeader-label">1 Seleccionado</span>
+			</div>
+			<div class="AppHeader-right">
+				<div class="AppHeader-action">
+					<button class="appButton icon-delete"></button>		
+				</div>
+			</div>
+		</section>
+
+		<section class="AppHeader AppHeader--view is-hidden">
+			<div class="AppHeader-left">				
+				<span class="AppHeader-Icon icon-arrow_back">B</span>
+			</div>
+			<div class="AppHeader-right">
+				<div class="AppHeader-action">
+					<span class="icon-delete">D</span>
+				</div>
+			</div>
+		</section>
+
 	</div>
 </header>
 
