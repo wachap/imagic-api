@@ -113,13 +113,14 @@
 							</a>
 						</div>
 						<div class="PhotoList-photo">
-							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
+							<input id="a" type="checkbox" class="AppCheck-input PhotoList-checkBox" />
+							<label  for="a" class="AppCheck-label PhotoList-checkBox icon-check_circle"></label>
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
+							<span class="PhotoList-photoTitle">Javascript</span>
 						</div>
 						<div class="PhotoList-photo">
-							<input type="checkbox" class="AppCheck PhotoList-checkBox icon-check_circle" />
 							<a href="#" class="PhotoList-image">
 								<img src="/images/js-logo.png" alt="#"/>
 							</a>
