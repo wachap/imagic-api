@@ -1,7 +1,9 @@
 .header-section {
 	box-shadow: 0 0 8px 4px rgba(0,0,0,0.2);
 	display: block;
-	width: 100%;	
+	position: relative;
+	width: 100%;
+	z-index: 9999 !important;
 
 	.is-hidden {
 		display: none;

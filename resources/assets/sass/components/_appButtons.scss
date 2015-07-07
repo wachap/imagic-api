@@ -3,7 +3,7 @@ $appButton-bg: $black;
 $appButton-color: $white;
 $appButton-fontSize: 24px;
 
-.appButton {	
+.appButton {
 	background: $transparent;
 	border-radius: 50%;
 	border: none;
@@ -24,12 +24,12 @@ $appButton-fontSize: 24px;
 		outline:0px;
 	}
 
-	&:active {		
+	&:active {
 		background: rgba($appButton-bg, 0.1);
 
 		&:after {
 			height: $appButton-size;
-			opacity: 1;		
+			opacity: 1;
 			width: $appButton-size;
 		}
 	}
@@ -38,8 +38,8 @@ $appButton-fontSize: 24px;
 		background: rgba($appButton-bg, 0.2);
 		border-radius: 50%;
 		content: "";
-		height: 0;		
-		width: 0;		
+		height: 0;
+		width: 0;
 
 		/* Posicion */
 		left: 50%;
@@ -61,8 +61,42 @@ $appButton-fontSize: 24px;
 		/* Posicion */
 		position: relative;
 		z-index: 12;
+
+		/* Transition */
+		transition-duration: 0.15s;
+		transition-property: color;
+		transition-timing-function: ease-out;
 	}
 
+}
+
+.appButton--black {
+
+}
+
+.appButton--white {
+	@extend .appButton;
+	color: $white;
+
+	&:after {
+		background: rgba($white, 0.1);
+	}
+
+	&:active {
+		background: rgba($white, 0.1);
+	}
+}
+
+.appButton--select {
+	@extend .appButton;
+
+	&:after {
+		background: rgba($black, 0.1);
+	}
+
+	&:active {
+		background: rgba($black, 0.1);
+	}
 }
 
 /**
