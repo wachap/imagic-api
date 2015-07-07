@@ -169,7 +169,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -237,8 +236,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -298,8 +296,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -362,6 +358,7 @@ th {
   src: url("../fonts/icomoon.eot?#iefixcr9etf") format("embedded-opentype"), url("../fonts/icomoon.ttf?cr9etf") format("truetype"), url("../fonts/icomoon.woff?cr9etf") format("woff"), url("../fonts/icomoon.svg?cr9etf#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -448,7 +445,11 @@ html {
 body {
   font-size: 16px;
   /* Flex */
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 hr {
@@ -459,7 +460,6 @@ hr {
 
 .App-header {
   background: #ffffff;
-  padding: 5px 30px;
   width: 100%; }
 
 .App-options {
@@ -471,36 +471,116 @@ hr {
   overflow-y: auto;
   width: calc(100% - 260px); }
 
+.appButton {
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  height: 48px;
+  overflow: hidden;
+  width: 48px;
+  /* Posicion */
+  position: relative;
+  z-index: 9999 !important;
+  /* Transition */
+  transition-duration: 0.15s;
+  transition-property: background;
+  transition-timing-function: ease-out; }
+  .appButton:focus {
+    outline: 0px; }
+  .appButton:active {
+    background: rgba(0, 0, 0, 0.1); }
+    .appButton:active:after {
+      height: 48px;
+      opacity: 1;
+      width: 48px; }
+  .appButton:after {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    content: "";
+    height: 0;
+    width: 0;
+    /* Posicion */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    /* Transition */
+    transition-duration: 0.15s;
+    transition-property: background, height, width, opacity;
+    transition-timing-function: ease-out; }
+  .appButton:before {
+    color: #ffffff;
+    font-size: 24px;
+    /* Posicion */
+    position: relative;
+    z-index: 12; }
+
+/**
+How it work
+<button class="appButton icon-delete"></button>
+**/
 .AppHeader {
+  padding: 5px 30px;
   /* Flex */
-  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.AppHeader-logo {
+.AppHeader-left {
   /* Flex */
-  flex-grow: 0.5; }
-  .AppHeader-logo img,
-  .AppHeader-logo h1 {
-    display: inline-block;
-    vertical-align: middle; }
-  .AppHeader-logo img {
-    width: 24px; }
-  .AppHeader-logo h1 {
-    font-size: 20px;
-    margin: 0 0 0 20px; }
-
-.AppHeader-actions {
-  /* Flex */
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-grow: 0.5;
+  -ms-flex-positive: 0.5;
+  flex-grow: 0.5; }
+
+.AppHeader-logo {
+  width: 24px; }
+
+.AppHeader-label {
+  font-size: 20px;
+  margin: 0 0 0 20px; }
+
+.AppHeader-center {
+  /* Flex */
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .AppHeader-actionSearch {
   background: #EEEEEE;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 0 24px; }
   .AppHeader-actionSearch input {
@@ -510,6 +590,8 @@ hr {
     height: 40px;
     vertical-align: top;
     /* Flex */
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1; }
     .AppHeader-actionSearch input:focus {
       outline: 0px; }
@@ -522,6 +604,8 @@ hr {
 .AppHeader-actionUpload {
   margin-left: 20px;
   /* Flex */
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1; }
   .AppHeader-actionUpload .btn-upload {
     background: transparent;
@@ -534,6 +618,14 @@ hr {
   .AppHeader-actionUpload .icon-backup {
     color: #757575;
     font-size: 24px; }
+
+.AppHeader--select {
+  background: #4285F4;
+  color: #ffffff; }
+  .AppHeader--select .appButton:after {
+    background: rgba(255, 255, 255, 0.1); }
+  .AppHeader--select .appButton:active {
+    background: rgba(255, 255, 255, 0.1); }
 
 .OptionList {
   background: #ffffff;
@@ -551,8 +643,14 @@ hr {
   padding: 12px 12px 12px 25px;
   text-decoration: none;
   /* Flex */
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
   .OptionList-option:hover {
     background: #F5F5F5; }
@@ -576,7 +674,11 @@ hr {
   background: #ff4136;
   margin-top: 20px;
   /* Flex */
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .PhotoList-container {
@@ -584,16 +686,32 @@ hr {
   margin-top: 60px;
   padding: 0 24px 24px 24px;
   /* Flex */
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .PhotoList-photos {
   /* Flex */
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .PhotoList-photo {
@@ -601,6 +719,7 @@ hr {
   margin-top: 10px;
   position: relative; }
   .PhotoList-photo.is-select .PhotoList-image {
+    -webkit-transform: scale(0.8);
     transform: scale(0.8); }
 
 .PhotoList-select {
@@ -614,6 +733,7 @@ hr {
   height: 220px;
   /* transition */
   transition-duration: 0.2s;
+  transition-property: -webkit-transform;
   transition-property: transform;
   transition-timing-function: ease-out; }
   .PhotoList-image img {
@@ -644,11 +764,16 @@ background-image: linear-gradient(to bottom,rgba(0,0,0,0.26),transparent 56px,tr
   width: 100%;
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
   z-index: 9999 !important; }
+  .header-section .is-hidden {
+    display: none;
+    visibility: none; }
 
 .main-section {
   position: relative;
   width: 100%;
   /* Flex */
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .main-section-container {
@@ -658,8 +783,12 @@ background-image: linear-gradient(to bottom,rgba(0,0,0,0.26),transparent 56px,tr
   left: 0;
   right: 0;
   /* Flex */
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
-
-/*# sourceMappingURL=style.css.map */
